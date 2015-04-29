@@ -6,3 +6,5 @@ This project is obsolete, it uses old Youtube API v2 which is not suppoted anymo
 
 I'm working on update to APIv3.
 
+To stream online radio stream to pifm using a pipe, use something like this:
+sox -t mp3 listen.pls -t wav -r 22050 -c 1 - | sudo ./pifm - 97.7
