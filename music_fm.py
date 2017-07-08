@@ -1,7 +1,7 @@
 import io,sys,os
 import subprocess
 
-FREQUENCY = "97.7"
+FREQUENCY = "103.3"
 
 search = sys.argv[1]
 
