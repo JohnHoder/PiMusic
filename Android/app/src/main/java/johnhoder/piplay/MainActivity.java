@@ -76,6 +76,13 @@ public class MainActivity extends Activity {
                 //new stopExecutionSSH().execute();
             }
         });
+
+        Bundle extras = getIntent().getExtras();
+        String value1 = extras.getString(Intent.EXTRA_TEXT);
+        if(!value1.isEmpty()) {
+
+            Toast.makeText(getApplicationContext(), value1, Toast.LENGTH_SHORT).show();
+        }
     }
 
     void startSTT() {
@@ -128,7 +135,7 @@ public class MainActivity extends Activity {
                 channel.setErrStream(System.err);
                 OutputStream out = channel.getOutputStream();
                 BufferedReader in = new BufferedReader(new InputStreamReader(channel.getInputStream()));
-                channel.setCommand("pwd; cd ~/john/music_pi/; python music_fm.py '" + arg0[0] + "'");
+                channel.setCommand("pwd; cd /home/sonstiges/PiMusic/; python music_fm.py '" + arg0[0] + "'");
                 channel.connect();
                 String msg = null;
                 while (true) {
