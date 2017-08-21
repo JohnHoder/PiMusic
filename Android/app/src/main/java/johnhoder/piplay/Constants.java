@@ -5,9 +5,9 @@ package johnhoder.piplay;
  */
 
 public final class Constants {
-    public static final String USERNAME = "pi";
-    public static final String PASSWORD = "pass";
-    public static final String ADDRESS = "ip";
+    public static final String USERNAME = "root";
+    public static final String PASSWORD = "1337code";
+    public static final String ADDRESS = "raspberry";
     public static final Integer PORT = 22;
 
 }
